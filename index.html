@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Asking Her</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div>
+            <h1 class="header-text">Do you wanna go out with me?</h1>
+        </div>
+
+        <div class="gif_container">
+            <img src="peach-goma-peach-and-goma.gif" alt="cute_animation">
+        </div>
+
+        <div class="buttons">
+            <button class="btn" id="yes_button" onclick="nextPage()">Yes</button>
+            <button class="btn" id="no_button" onmouseover="move_button()" onclick="move_button()">No</button>
+
+            <script>
+                function nextPage() {
+                    window.location.href = "yes.html"
+                }
+
+                function move_button() {    
+                    var x = Math.random() * (window.innerWidth - document.getElementById("no_button").offsetWidth);
+                    var y = Math.random() * (window.innerHeight - document.getElementById("no_button").offsetHeight);
+                    document.getElementById("no_button").style.left = `${x}px`;
+                    document.getElementById("no_button").style.top = `${y}px`;
+                }
+            </script>
+
+        </div>
+
+    </div>
+</body>
+</html>
